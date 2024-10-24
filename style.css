@@ -1,0 +1,175 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bg-color:#f4faf6;
+    --light-green: #656866;
+    --shadow: 0px 16px 40px 0px rgba(143, 160, 193, 0.14);
+    --button-bg: #fff;
+    --white: #fff;
+    --bg-html:#fff1e9;
+    --bg-css: #e0fdef;
+    --bg-js:#ebf0ff;
+    --bg-acessibilidade: #f6e7ff;
+    --primary-text-color: #080808;
+    --secondary-text-color: #665f5c;
+    --bg-mobile: url(./assets-images/pattern-background-mobile-light.svg);
+    --bg-desktop: url(./assets-images/pattern-background-desktop-light.svg);
+
+}
+
+.escuro{
+
+}
+
+body {
+    height: 100vh;
+    background: var(--bg-mobile) var(--bg-color);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+header {
+    padding: 16px 24px;
+    display: flex;
+    justify-content: flex-end;
+}
+.tema {
+    padding: 8px 0;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+.tema img {
+    width: 16px;
+}
+.tema button{
+    height: 20px;
+    width: 34px;
+    background: var(--light-green);
+    border: 0;
+    border-radius: 999px;
+    padding: 4px;
+}
+.tema button div{
+    background: var(--white);
+    width: 12px;
+    height: 12px;
+    border-radius: 999px;
+
+}
+
+main{
+    padding: 12px 24px;
+}
+
+.boas_vindas{
+    margin-bottom: 24px;
+
+}
+.boas_vindas h1{ 
+    font-size: 42px;
+    font-weight: 300;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: var(--primary-text-color);
+    margin-bottom: 15px;
+}
+
+.boas_vindas strong h1{
+    font-weight: 1500;
+    
+}
+
+.boas_vindas p{
+    color: var(--secondary-text-color);
+    font-size: 14px;
+    line-height: 150%;
+    font-style: italic;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+}
+
+.assuntos{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+}
+
+.assuntos button {
+    border: none;
+    background: var(--button-bg);
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    padding: 10px;
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+    font-size: 25px;
+    font-weight: 450;
+    color: var(--primary-text-color);
+
+}
+
+.assuntos button div{
+    width: 40px;
+    height: 40px;
+    padding: 5px;
+    border-radius: 5px;
+    box-shadow: var(--shadow)
+}
+
+
+footer{
+    padding: 12px 24px;
+    font-size: 12px;
+    color: var(--secondary-text-color);
+        
+}
+.rodape{
+    margin-top: 10px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+
+}
+
+@media(min-width: 1024px) {
+    body{
+        background: var(--bg-desktop) var(--bg-color);
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    main{
+        margin-top: 68px;
+        display: flex;
+        max-width: 1160px;
+        margin-inline: auto;
+    }
+    section{
+        width:100%;
+    }
+
+    .boas_vindas h1{
+        font-size: 68px;
+        margin-bottom: 48px;
+    }
+    
+    .boas_vindas p{
+        font-size: 20px;
+    }
+
+    .assuntos button{
+        font-size: 28px;
+    }
+
+    footer{
+        display: flex;
+        max-width: 1160px;
+        margin-inline: auto;
+        
+    }
+}
